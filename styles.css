@@ -68,6 +68,7 @@ body {
     font-family: var(--font);
     background: var(--white);
     color: var(--black);
+    line-height: 1.5;
 }
 
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
@@ -75,6 +76,36 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+/* HEADER VANGUARD */
+header {
+    background: var(--black);
+    color: var(--white);
+}
+ 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    position: relative;
+}
+
+header h1 a {
+    padding-left: 3.5rem;
+    display: inline-block;
+}
+
+header a {
+    color: var(--white);
+    text-decoration: none; 
 }
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
@@ -116,7 +147,37 @@ body {
 }
 
 /* SERVICES */
+.grid {
+    display: grid;
+    gap: 1rem;
+}
 
+.grid article {
+    background: var(--blue);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* RESULTS */
+#results {
+    background: var(--blue);
+    color: var(--white);
+    padding: 2rem 0;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid var(--charcoal);
+}
+
+tr:nth-child(even) {
+    background: var(--charcoal);
 }
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
@@ -137,7 +198,7 @@ body {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    transition: height 1s ease-in-out;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -151,6 +212,8 @@ body {
     font-weight: bold;
     color: var(--white);
 }
+
+/* KEYFRAMES */
 @keyframes stepUp {
     0% {
         height: 0;
