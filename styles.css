@@ -290,7 +290,33 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+/* ABOUT */
+#about { 
+    padding: 3rem 0;
+}
+
+#about h2 {
+    transform: translateX(25px);
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+#about p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-align: left;
+    color: var(--black);
+}
 /* SERVICES */
+
+#services h2 {
+    transform: translateX(25px);
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    margin-bottom: 1.5rem;
+}
 .grid {
     display: grid;
     gap: 1rem;
@@ -299,8 +325,19 @@ nav ul li a:hover {
 .grid article {
     background: var(--blue);
     color: var(--white);
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.grid article h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    transform: translateX(20px);
+    margin-bottom: 1rem;
+}
+
+.grid article p {
+    text-align: left;
 }
 
 /* RESULTS */
