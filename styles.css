@@ -139,7 +139,6 @@ header a {
 /* INNOVATION AND INVESTMENT SECTION CONT. */
 #innovation-and-investment .container {
     max-width: 650px;
-    width: 90%;
     margin: 2rem auto 0;
     display: flex;
     flex-direction: column;
@@ -167,8 +166,7 @@ header a {
 }
 
 #innovation-and-investment h2,
-#innovation-and-investment p,
-#innovation-and-investment .btn {
+#innovation-and-investment p {
     animation: dropIn 0.8s ease-out forwards;
 }
 
@@ -277,6 +275,7 @@ nav ul li a:hover {
     border-radius: 10px;
     padding: 12px 18px;
     text-decoration: none;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .btn:hover {
@@ -303,11 +302,6 @@ nav ul li a:hover {
     color: var(--black);
 }
 /* SERVICES */
-
-#services {
-    padding-top: 0.2rem;
-}
-
 #services h2 {
     transform: translateX(25px);
     font-size: 1.8rem;
@@ -373,16 +367,18 @@ nav ul li a:hover {
     margin: 0 auto;
     border-collapse: collapse;
     font-size: 1rem;
-}
-
-#results th {
-    background: var(--black);
-    font-weight: 600;
+    text-align: center;
 }
 
 #results th,
 #results td {
     padding: 1rem;
+    border: 1px solid var(--charcoal);
+}
+
+#results th {
+    background: var(--black);
+    font-weight: 600;
 }
 
 #results tr:nth-child(even) {
@@ -395,20 +391,6 @@ nav ul li a:hover {
 
 #results h3:last-of-type {
     margin-top: 2rem;
-}
-
-table {
-    width: 100%;
-    text-align: center;
-}
-
-th, td {
-    padding: 0.75rem;
-    border: 1px solid var(--charcoal);
-}
-
-tr:nth-child(even) {
-    background: var(--charcoal);
 }
 
 /* CONTACT US */
@@ -460,10 +442,12 @@ tr:nth-child(even) {
     width: 100%;
     margin-top: 1rem;
     cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
 #contact input[type="submit"]:hover {
     background: var(--red);
+    transform: scale(1.05);
 }
 
 /* FOOTER */
@@ -579,9 +563,6 @@ footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-    }
-    .form-group.full {
-        grid-column: span 1;
     }
     .form-group.full:last-child {
         grid-column: 2;
