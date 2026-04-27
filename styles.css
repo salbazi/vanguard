@@ -304,6 +304,10 @@ nav ul li a:hover {
 }
 /* SERVICES */
 
+#services {
+    padding-top: 0.2rem;
+}
+
 #services h2 {
     transform: translateX(25px);
     font-size: 1.8rem;
@@ -320,8 +324,12 @@ nav ul li a:hover {
     color: var(--white);
     padding: 1.5rem;
     border-radius: 10px;
+    transition: transform 0.25s ease;
 }
 
+.grid article:hover { /* little bounce animation for services */
+    transform: translateY(-10px);
+}
 .grid article h3 {
     font-size: 1.3rem;
     font-weight: 600;
@@ -352,7 +360,6 @@ nav ul li a:hover {
     font-weight: bold;
     transform: translateX(20px);
     margin-bottom: 1.5rem;
-    text-align: left;
 }
 
 #results > .container > p {
@@ -424,7 +431,7 @@ tr:nth-child(even) {
 #contact form {
     display: flex;
     flex-direction: column;
-    gap: 0.7rem;
+    gap: 1rem;
 }
 
 #contact input,
@@ -437,6 +444,11 @@ tr:nth-child(even) {
     min-height: 125px;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
 /* submit button */
 #contact input[type="submit"] {
     background: var(--blue);
@@ -445,7 +457,8 @@ tr:nth-child(even) {
     border-radius: 10px;
     font-size: 1rem;
     font-weight: 600;
-    margin-top: 2rem;
+    width: 100%;
+    margin-top: 1rem;
     cursor: pointer;
 }
 
@@ -546,34 +559,32 @@ footer {
     .grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    #results .container {
+    .results-content {
         display: grid;
         grid-template-columns: 1.3fr 1fr;
         gap: 2.5rem;
+        margin-top: 2rem;
         align-items: start;
     }
-
-    #contact form {
-        display: grid;
-        grid-template-columns: 1 fr 1fr;
-        gap: 1rem;
-    }
-    #contact textarea, 
-    #contact input[type="submit"] {
-        grid-column: span 2;
+    #results h2,
+    #results > .container > p {
+        text-align: left;
     }
 
 }
 
 /* MEDIA QUERIES (LARGE) */
 @media (min-width: 1024px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
+    #contact form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
-    .container {
-        width: 85%;
+    .form-group.full {
+        grid-column: span 1;
     }
-    #innovation-and-investment h2 {
-        font-size: 2.5rem;
+    .form-group.full:last-child {
+        grid-column: 2;
+        align-self: start;
     }
 }
